@@ -19,6 +19,8 @@ def apply_coupons(cart, coupons)
       if !cart["#{item_name} W/COUPON"]
         cart["#{item_name} W/COUPON"] = {:count => 1, :price => coupon[:cost]}
         cart["#{name} W/COUPON"][:clearance] = cart[name][:clearance]
+      else 
+        
 end
 
 def apply_clearance(cart)
