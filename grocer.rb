@@ -1,6 +1,16 @@
 def consolidate_cart(cart)
-  # code here
+  cart.each_with_object({}) do |item, result|
+    item.each do |name, description|
+      if !result[name]
+        description[:count] = 1
+        result[name] = description
+      else 
+        description[:count] += 1
+      end
+    end
+  end
 end
+
 
 def apply_coupons(cart, coupons)
   # code here
