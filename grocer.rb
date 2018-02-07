@@ -45,6 +45,9 @@ def checkout(cart, coupons)
   total = 0
   cart_w_clearence.each do |item_name, description|
     total += description[:count] * description[:price]
-  
-  
+  end 
+  if total > 100
+    total = total * 0.90
+  end
+  total 
 end
