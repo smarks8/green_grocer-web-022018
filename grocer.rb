@@ -29,7 +29,8 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  cart.each do |item_name, properties|
+  cart.each do |item_name, description|
+    if description[:clearance] == true 
     
 end
 
